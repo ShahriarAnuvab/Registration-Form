@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="container mx-auto">
+    <header class="">
+        <h1 class="text-xl md:text-3xl text-[#D28614] border-b-2">Student Registration Form</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="p-2">
+                <h1>
+                    Please enter relevent information
+                </h1>
+                <small>Mandatory Field*
+                </small>
+            </div>
+            <form class="flex flex-col md:flex-row gap-5">
+                <div class=" ml-2 p-5">
+                    <div>
+                        <label for=" district ">Mandatory Field*
+                            District (Institute District: Where you want to do your course)*</label>
+                        <input type="text" name=" district " placeholder="district" class="border w-full" required>
+                    </div>
+                    <div>
+                        <label for="course">Course
+                            District (Institute District: Where you want to do your course)*</label>
+                        <select name="course" form="courseForm" class="w-full border" required>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for=" district ">Student Name*</label>
+                        <input type="text" name="studentName " placeholder="Student Name" class="border w-full"
+                            required>
+                    </div>
+                    <div>
+                        <label for=" district ">Father Name*</label>
+                        <input type="text" name="fatherName " placeholder="Father Name" class="border w-full" required>
+                    </div>
+                    <div>
+                        <label for=" district ">Mother Name*</label>
+                        <input type="text" name="motherName " placeholder="Mother Name" class="border w-full" required>
+                    </div>
+                    <div>
+                        <fieldset class="border p-5">
+                            <legend>Date of Birth</legend>
+
+                            <label for="bdy">Day</label>
+                            <input type="date" id="bdy" name="bdy">
+
+                            <label for="bMonth">Month</label>
+                            <select id="bMonth" name="bMonth" required>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+
+
+                            </select>
+
+                            <label for="bYear">Year</label>
+                            <input type="text" name="bYear" id="bYear" required>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <p>Gender *</p>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" value="Male">
+                        <label for="male">Female</label>
+                        <input type="radio" name="gender" value="Female">
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p>Physically Handicapped*</p>
+                        <label for="yes">Yes </label>
+                        <input type="radio" name="ph" value="yes">
+                        <label for="no">No</label>
+                        <input name="ph" type="radio" value="no">
+                    </div>
+                    <div>
+                        <label for=" email ">Email*</label>
+                        <input type="email" name="email" placeholder="Email" class="border w-full" required>
+                        <p>(e.g: example@mail.com)</p>
+                    </div>
+                    <div>
+                        <label for=" phone ">Phone (Must be 11 Digits)*</label>
+                        <input type="tex" name="phone" placeholder="Phone" class="border w-full" required>
+                        <p>(e.g:0155123456)</p>
+                    </div>
+                </div>
+                <!-- Right Side -->
+
+                <div class="md:border-l-2 md:border-black ml-2 p-5">
+                    <div>
+                        <p>
+                            Identification Type*</p>
+
+                        <select name="identity">
+                            <option value="1">NID</option>
+                            <option value="2">Birth Certificate</option>
+                        </select>
+                        <br>
+                        <label for="idNum">Identification No. (Must be 10 digits for new NID or 17 digits for old NID.
+                            If
+                            your National ID is 13 digits, then please add your birth year with the ID as prefix.
+                            Example:
+                            1980XXXXXXXXXXXXX)*</label>
+                        <input type="text" name="idNum" placeholder="Number" class="w-full border">
+                    </div>
+                    <div>
+                        <label for=" hDistrict ">Home District*</label>
+                        <input type="text" name="hDistrict " placeholder="Home District" class="border w-full" required>
+                    </div>
+                    <div>
+                        <label for=" upazila ">upazila*</label>
+                        <input type="text" name="upazila " placeholder="Home District" class="border w-full" required>
+                    </div>
+                    <div>
+                        <label for=" vNume ">Village/House No./Road No./Other Alternative*</label>
+                        <input type="text" name="vNum " placeholder="Village/House No./Road No./Other Alternative*"
+                            class="border w-full" required>
+                    </div>
+                    <div>
+                        <label for="Poffice">Post Office*</label>
+                        <input type="text" name="Poffice " placeholder="Post Office**" class="border w-full" required>
+                    </div>
+                    <div class="my-4">
+                        <p class="mb-2">Education Qualification*</p>
+
+                        <label for="highSchool" class="flex items-center mb-2">
+                            <input type="checkbox" id="highSchool" name="education" class="mr-2">
+                            <span>High School</span>
+                        </label>
+
+                        <label for="college" class="flex items-center mb-2">
+                            <input type="checkbox" id="college" name="education" class="mr-2">
+                            <span>College</span>
+                        </label>
+
+                        <label for="university" class="flex items-center mb-2">
+                            <input type="checkbox" id="university" name="education" class="mr-2">
+                            <span>University</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="fileInput" class="block mb-2">Photograph*</label>
+                        <input type="file" id="fileInput" name="fileInput" class="border p-2">
+                        <p>(File type must be jpg or jpeg or png. Maximum file size 2 mb.)</p>
+                    </div>
+                    <div>
+                        <label for="Signature" class="block mb-2">Signature*</label>
+                        <input type="file" id="Signature" name="Signature" class="border p-2">
+                        <p>(File type must be jpg or jpeg or png. Maximum file size 2 mb.)</p>
+                    </div>
+
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="md:flex justify-center items-center md:my-5">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3747016.8915031157!2d87.70352446720406!3d23.489442187647818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2sbd!4v1702760286272!5m2!1sen!2sbd"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+    </main>
+
+
+</body>
+
+
+</html>
